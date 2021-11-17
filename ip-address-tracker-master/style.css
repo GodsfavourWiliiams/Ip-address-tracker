@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.back-cont img {
+    width: 100%;
+    height: 250px;
+}
+
+h1 {
+    position: absolute;
+    top: 100px;
+}
+
+.search_box {
+    position: absolute;
+    top: 150px;
+    width: 500px;
+    height: 60px;
+}
+
+.search_box .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 0px 1px 4px gray;
+}
+
+.search_box .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
