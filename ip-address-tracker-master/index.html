@@ -5,41 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <title>IP Address Tracker</title>
 
 </head>
 
 <body>
-    <div class="back-cont">
-        <img src="/ip-address-tracker-master/images/pattern-bg.png" alt="">
+    <div class="app-container">
+        <div class="form-container">
+            <h1 class="title">IP Address Tracker</h1>
+            <form class="form-elements">
+                <input id="ip_address" type="text" class="form-control" placeholder="Search for any IP address or domain">
+                <button id="search_btn" class="btn btn-dark">
+                    <img src="assests/icon-arrow.svg" width="12px" height="12px" alt="" srcset="">
+                </button>
+            </form>
+        </div>
+        <div class="results-display">
+            <div class="display-container">
+                <div class="info-block block-seperator">
+                    <h4 class="muted-title">IP Address</h4>
+                    <span id="current_ip" class="results">192.212.174.101</span>
+                </div>
+                <div class="info-block block-seperator">
+                    <h4 class="muted-title">Location</h4>
+                    <span id="current_town" class="results">Cape Town, SA 7530</span>
+                </div>
+                <div class="info-block block-seperator">
+                    <h4 class="muted-title">Timezone</h4>
+                    <span id="current_zone" class="results">UTC +2:00</span>
+                </div>
+                <div class="info-block info-block-last">
+                    <h4 class="muted-title">ISP</h4>
+                    <span id="current_isp" class="results">Rain</span>
+                </div>
+            </div>
+        </div>
+        <div id="display-map" class="map-container"></div>
     </div>
-    <h1 class="text-white">IP Address Tracker</h1>
-    <div class="search_box">
-        <input type="text" class="input" placeholder="Search for any IP address or domain">
-        <div class="btn btn_common bg-black">
-            <img src="/ip-address-tracker-master/images/icon-arrow.svg" alt="" class="">
-        </div>
-    </div>
-    <div class="bg-white d-flex gap-5">
-        <div class="">
-            <h6>IP Address</h6>
-        </div>
-        <div class="">
-            <h6>Location</h6>
-        </div>
-        <div class="">
-            <h6>Timezone</h6>
-            <p class="">UTC-</p>
-        </div>
-        <div class="">
-            <h6 class=""> ISP</h6>
-        </div>
-    </div>
-    <!-- add offset value dynamically using the API -->
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 </body>
+<script src="script.js"></script>
 
 </html>
