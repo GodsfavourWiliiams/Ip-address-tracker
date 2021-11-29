@@ -8,11 +8,6 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-
-/* .container-fluid {
-    padding: 0;
-} */
-
 .background-heading {
     position: relative;
     background: url("images/pattern-bg.png");
@@ -46,7 +41,7 @@ body {
     width: 75%;
     margin: auto;
     background-color: hsl(0, 0%, 100%);
-    padding: 20px 15px;
+    padding: px 15px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -111,6 +106,14 @@ body {
 
 .error-input {
     border: 1px solid red;
+}
+
+@media screen and (max-width:768px) {
+    .address-info div:not(:first-child) {
+        border-top: 1px solid #000;
+        width: 100%;
+        padding-top: 10px;
+    }
 }
 
 @media screen and (min-width:1000px) {
