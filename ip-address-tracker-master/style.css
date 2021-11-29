@@ -16,6 +16,9 @@ body {
     padding: 10px 0;
 }
 
+
+/*  */
+
 .background-heading h1 {
     font-size: 20px;
     color: hsl(0, 0%, 100%);
@@ -41,7 +44,7 @@ body {
     width: 75%;
     margin: auto;
     background-color: hsl(0, 0%, 100%);
-    padding: px 15px;
+    padding: 20px 15px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -105,7 +108,7 @@ body {
 }
 
 .error-input {
-    border: 1px solid red;
+    border: 2px solid red;
 }
 
 @media screen and (max-width:768px) {

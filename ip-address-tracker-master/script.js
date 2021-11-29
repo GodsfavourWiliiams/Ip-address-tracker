@@ -8,6 +8,24 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=JXZcJEvrr
     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
 }).addTo(map);
 
+var circle = L.circle([51.508, -0.11], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
 function getIPAddress(e) {
     // constructing the url
     let userInput = document.querySelector('.user-address').value;
@@ -33,7 +51,7 @@ function getIPAddress(e) {
             if (res.ok) {
                 return res.json();
             } else {
-                throw new Error("Invalid input.");
+                throw new Error("Oooops snap!.... An error has occured while tracking your IP.");
             }
         })
         .then(data => {
